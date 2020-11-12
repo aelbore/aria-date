@@ -1,6 +1,5 @@
-
 import { expect } from 'aria-mocha'
-import { getWeeksInMonth } from './index'
+import { getWeeksInMonth } from './weeks-in-month'
 
 describe('getWeeksInMonth', () => {
 
