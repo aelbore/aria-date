@@ -2,7 +2,6 @@
   "name": "aria-date",
   "version": "0.0.1",
   "description": "Date helper with zero dependencies",
-  "main": "index.js",
   "scripts": {
     "build": "aria-build -d",
     "test": "aria-mocha --check-coverage"

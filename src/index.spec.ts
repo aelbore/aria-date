@@ -5,7 +5,7 @@ import { getWeeksInMonth } from './index'
 describe('getWeeksInMonth', () => {
 
   it('should get the weeks range in the given month & year', () => {
-    const date = new Date(2020, 11, 1)
+    const date = new Date('12-Nov-2020')
 
     const expected = [
       { start: 1, end: 1 },
@@ -16,7 +16,7 @@ describe('getWeeksInMonth', () => {
       { start: 30, end: 30 }
     ]
 
-    const results = getWeeksInMonth(date.getMonth(), date.getFullYear())
+    const results = getWeeksInMonth(date)
     
     expect(results.length).equal(expected.length)
     results.forEach((result, index) => {

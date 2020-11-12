@@ -1,9 +1,10 @@
-export function getWeeksInMonth(month: number, year: number) {
+export function getWeeksInMonth(date: Date) {
+  const month  = date.getMonth(), year = date.getFullYear()
   const _start = 'monday'
 
   const weeks = []
-  const firstDate = new Date(year, (month - 1), 1)
-  const lastDate = new Date(year, month, 0)
+  const firstDate = new Date(year, month, 1)
+  const lastDate = new Date(year, month + 1, 0)
   const numDays = lastDate.getDate()
 
   let start = 1, end = 7 - firstDate.getDay()
