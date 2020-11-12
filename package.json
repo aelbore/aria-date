@@ -1,0 +1,23 @@
+{
+  "name": "aria-date",
+  "version": "0.0.1",
+  "description": "Date helper with zero dependencies",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aelbore/aria-date.git"
+  },
+  "keywords": [
+    "date",
+    "helper"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aelbore/aria-date/issues"
+  },
+  "homepage": "https://github.com/aelbore/aria-date#readme"
+}
