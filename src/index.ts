@@ -1,8 +1,26 @@
-export function getWeeksInMonth(date: Date) {
-  const month  = date.getMonth(), year = date.getFullYear()
-  const _start = 'monday'
+import { WeekRange } from './types'
 
-  const weeks = []
+export * from './formatter'
+
+export function getCurrentWeek(date: Date, weeks?: WeekRange[]) {
+  weeks = weeks || getWeeksInMonth(date)
+
+  const currentDay = date.getDate()
+
+  const currentWeek = weeks.find(week => {
+    return (week.start <= currentDay && week.end >= currentDay )
+  })
+
+  return {
+    week: weeks.indexOf(currentWeek) + 1,
+    range: currentWeek
+  }
+}
+
+export function getWeeksInMonth(date: Date) {
+  const month  = date.getMonth(), year = date.getFullYear(), _start = 'monday'
+
+  const weeks: WeekRange[] = []
   const firstDate = new Date(year, month, 1)
   const lastDate = new Date(year, month + 1, 0)
   const numDays = lastDate.getDate()
