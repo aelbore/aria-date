@@ -4,7 +4,8 @@
   "description": "Date helper with zero dependencies",
   "scripts": {
     "build": "aria-build -d",
-    "test": "aria-mocha --check-coverage"
+    "test": "aria-mocha --check-coverage",
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,7 @@
     "aria-build": "^0.5.2",
     "aria-fs": "^0.5.2",
     "aria-mocha": "^0.5.2",
+    "coveralls": "^3.1.0",
     "tslib": "^2.0.3",
     "typescript": "^4.0.5"
   }
