@@ -15,3 +15,8 @@ export interface WeekRange {
 export interface Formatter {
   format: (format: DateFormat) => string
 }
+
+export interface CurrentWeek {
+  week: number
+  range: WeekRange
+}
