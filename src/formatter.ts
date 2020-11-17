@@ -14,11 +14,15 @@ export function formatter(date?: Date) {
     'DD-MMM-YY': `${getDate}-${getMonth}-${getYear.substr(2)}`,
     'DD-MMM-YYYY': `${getDate}-${getMonth}-${getYear.substr(0)}`,
     'DD-MMM': `${getDate}-${getMonth}`,
+    'MMM-YY': `${getMonth}-${getYear.substr(2)}`,
+    'MMM-YYYY': `${getMonth}-${getYear.substr(0)}`,
     'MMM': getMonth,
     'DD': getDate,
     'YY': getYear.substr(2),
     'YYYY': getYear.substr(0),
     'DD-MM-YY': `${getDate}-${month.toString().padStart(2, '0')}-${getYear.substr(2)}`,
+    'MMM YY': `${getMonth} ${getYear.substr(2)}`,
+    'MMM YYYY': `${getMonth} ${getYear.substr(0)}`
   }
 
   const format = (format: DateFormat) => formats[format]

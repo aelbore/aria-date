@@ -1,11 +1,15 @@
 export type DateFormat = 'DD-MMM-YY' 
   | 'DD-MMM-YYYY' 
   | 'DD-MM-YY' 
-  | 'DD-MMM' 
+  | 'DD-MMM'
+  | 'MMM-YY'
+  | 'MMM-YYYY' 
   | 'DD' 
   | 'MMM' 
   | 'YY' 
   | 'YYYY'
+  | 'MMM YYYY'
+  | 'MMM YY'
 
 export interface WeekRange {
   start: number
