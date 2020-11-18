@@ -27,7 +27,9 @@ export function formatter(date?: Date) {
     'ddd, MMM YYYY': `${getDay(weekday)}, ${getMonth} ${getYear.substr(0)}`,
     'dddd, MMM YYYY': `${getDay(weekday, 'long')}, ${getMonth} ${getYear.substr(0)}`,
     'ddd, MMM YY': `${getDay(weekday)}, ${getMonth} ${getYear.substr(2)}`,
-    'dddd, MMM YY': `${getDay(weekday, 'long')}, ${getMonth} ${getYear.substr(2)}`
+    'dddd, MMM YY': `${getDay(weekday, 'long')}, ${getMonth} ${getYear.substr(2)}`,
+    'DD MMM, ddd': `${getDate} ${getMonth}, ${getDay(weekday)}`,
+    'DD MMM, dddd': `${getDate} ${getMonth}, ${getDay(weekday, 'long')}`
   }
 
   const format = (format: DateFormat) => formats[format]

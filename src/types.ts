@@ -14,6 +14,8 @@ export type DateFormat = 'DD-MMM-YY'
   | 'ddd, MMM YY'
   | 'dddd, MMM YYYY'
   | 'dddd, MMM YY'
+  | 'DD MMM, ddd'
+  | 'DD MMM, dddd'
   
 export interface WeekRange {
   start: number
