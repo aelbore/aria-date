@@ -1,3 +1,5 @@
 export * from './formatter'
 export * from './current-week'
 export * from './weeks-in-month'
+export * from './months-range'
+export * from './days'
