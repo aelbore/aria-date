@@ -10,7 +10,11 @@ export type DateFormat = 'DD-MMM-YY'
   | 'YYYY'
   | 'MMM YYYY'
   | 'MMM YY'
-
+  | 'ddd, MMM YYYY'
+  | 'ddd, MMM YY'
+  | 'dddd, MMM YYYY'
+  | 'dddd, MMM YY'
+  
 export interface WeekRange {
   start: number
   end: number
@@ -24,3 +28,5 @@ export interface CurrentWeek {
   week: number
   range: WeekRange
 }
+
+export type WeekDay = 'short' | 'long'

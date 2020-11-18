@@ -16,6 +16,8 @@ describe('formatter', () => {
     expect(format.format('YYYY')).equal('2020')
     expect(format.format('MMM YYYY')).equal('Nov 2020')
     expect(format.format('MMM YY')).equal('Nov 20')
+    expect(format.format('ddd, MMM YY')).equal('Sun, Nov 20')
+    expect(format.format('dddd, MMM YY')).equal('Sunday, Nov 20')
   })
 
   it('should format current date', () => {

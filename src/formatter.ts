@@ -1,10 +1,11 @@
-import { DateFormat } from './types'
+import { DateFormat, WeekDay } from './types'
+import { getDay } from './days'
 
 export function formatter(date?: Date) {
   const value = date || new Date()
 
   const months = [ 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec' ]
-  const day = value.getDate(), month = value.getMonth(), year = value.getFullYear()
+  const day = value.getDate(), month = value.getMonth(), year = value.getFullYear(), weekday = value.getDay()
 
   const getDate = day.toString().padStart(2, '0') 
   const getMonth = months[month]
@@ -22,7 +23,11 @@ export function formatter(date?: Date) {
     'YYYY': getYear.substr(0),
     'DD-MM-YY': `${getDate}-${month.toString().padStart(2, '0')}-${getYear.substr(2)}`,
     'MMM YY': `${getMonth} ${getYear.substr(2)}`,
-    'MMM YYYY': `${getMonth} ${getYear.substr(0)}`
+    'MMM YYYY': `${getMonth} ${getYear.substr(0)}`,
+    'ddd, MMM YYYY': `${getDay(weekday)}, ${getMonth} ${getYear.substr(0)}`,
+    'dddd, MMM YYYY': `${getDay(weekday, 'long')}, ${getMonth} ${getYear.substr(0)}`,
+    'ddd, MMM YY': `${getDay(weekday)}, ${getMonth} ${getYear.substr(2)}`,
+    'dddd, MMM YY': `${getDay(weekday, 'long')}, ${getMonth} ${getYear.substr(2)}`
   }
 
   const format = (format: DateFormat) => formats[format]

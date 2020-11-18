@@ -1,5 +1,3 @@
-
-
 export function getMonths(range: number, date?: Date) {
   const currentDate = date || new Date()
 
