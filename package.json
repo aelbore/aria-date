@@ -1,6 +1,6 @@
 {
   "name": "aria-date",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Date helper with zero dependencies",
   "scripts": {
     "build": "aria-build -d",
