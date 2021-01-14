@@ -16,6 +16,8 @@ export type DateFormat = 'DD-MMM-YY'
   | 'dddd, MMM YY'
   | 'DD MMM, ddd'
   | 'DD MMM, dddd'
+  | 'DD MMM'
+  | 'DD MMM YY'
   
 export interface WeekRange {
   start: number
@@ -27,6 +29,7 @@ export interface Formatter {
 }
 
 export interface CurrentWeek {
+  date: Date
   week: number
   range: WeekRange
 }

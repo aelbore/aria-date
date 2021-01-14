@@ -1,4 +1,4 @@
-import { DateFormat, WeekDay } from './types'
+import { DateFormat } from './types'
 import { getDay } from './days'
 
 export function formatter(date?: Date) {
@@ -29,7 +29,9 @@ export function formatter(date?: Date) {
     'ddd, MMM YY': `${getDay(weekday)}, ${getMonth} ${getYear.substr(2)}`,
     'dddd, MMM YY': `${getDay(weekday, 'long')}, ${getMonth} ${getYear.substr(2)}`,
     'DD MMM, ddd': `${getDate} ${getMonth}, ${getDay(weekday)}`,
-    'DD MMM, dddd': `${getDate} ${getMonth}, ${getDay(weekday, 'long')}`
+    'DD MMM, dddd': `${getDate} ${getMonth}, ${getDay(weekday, 'long')}`,
+    'DD MMM': `${getDate} ${getMonth}`,
+    'DD MMM YY': `${getDate} ${getMonth} ${getYear.substr(2)}`
   }
 
   const format = (format: DateFormat) => formats[format]
