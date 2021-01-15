@@ -72,7 +72,6 @@ describe('getPreviousWeek', () => {
     const date = new Date()
 
     const previousWeeks = getPreviousWeeks(date, { range: 4, datesInPrevMonth: true })
-    console.log(previousWeeks)
   })
 
 })
