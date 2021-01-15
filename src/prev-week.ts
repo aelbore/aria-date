@@ -29,7 +29,7 @@ export function getPreviousWeeks(date: Date, options: PreviousWeeksOptions) {
     if (Array.isArray(previousWeek)) {
       const prevWeek = previousWeek[0] as PreviousWeek
       prevWeek.currentWeek = previousWeek[1].currentWeek
-      prevWeek.dates = [ ...prevWeek.dates, ...previousWeek[1].dates ]
+      prevWeek.dates = [ ...previousWeek[1].dates, ...prevWeek.dates ]
       previousWeek = prevWeek
     } 
 
