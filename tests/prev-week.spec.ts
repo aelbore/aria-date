@@ -1,8 +1,8 @@
 import { expect } from 'aria-mocha'
-import { getCurrentWeek } from './current-week'
-import { formatter } from './formatter'
+import { getCurrentWeek } from '../src/current-week'
+import { formatter } from '../src/formatter'
 
-import { getPreviousWeek, getPreviousWeeks, PreviousWeek } from './prev-week'
+import { getPreviousWeek, getPreviousWeeks, PreviousWeek } from '../src/prev-week'
 
 describe('getPreviousWeek', () => {
 

@@ -1,5 +1,5 @@
 import { expect } from 'aria-mocha'
-import { formatter } from './formatter'
+import { formatter } from '../src/formatter'
 
 describe('formatter', () => {
 

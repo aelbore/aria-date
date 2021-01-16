@@ -1,7 +1,7 @@
 import { expect } from 'aria-mocha'
 
-import { compute } from './compute'
-import { formatter } from './formatter'
+import { compute } from '../src/compute'
+import { formatter } from '../src/formatter'
 
 describe('compute', () => {
 

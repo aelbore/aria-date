@@ -1,7 +1,7 @@
 import { expect } from 'aria-mocha'
 
-import { getDay, getLastDate } from './days'
-import { formatter } from './formatter'
+import { getDay, getLastDate } from '../src/days'
+import { formatter } from '../src/formatter'
 
 describe('getDays', () => {
 

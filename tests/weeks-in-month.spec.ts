@@ -1,7 +1,7 @@
 import { expect } from 'aria-mocha'
 
-import { WeekRange } from './types'
-import { getWeeksInMonth } from './weeks-in-month'
+import { WeekRange } from '../src/types'
+import { getWeeksInMonth } from '../src/weeks-in-month'
 
 describe('getWeeksInMonth', () => {
 

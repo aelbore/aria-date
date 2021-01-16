@@ -1,5 +1,5 @@
 import { expect } from 'aria-mocha'
-import { datediff } from './date-diff'
+import { datediff } from '../src/date-diff'
 
 describe('date-diff', () => {
 

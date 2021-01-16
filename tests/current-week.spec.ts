@@ -1,7 +1,7 @@
 import { expect } from 'aria-mocha'
 
-import { getCurrentWeek, getCurrentWeekDates } from './current-week'
-import { CurrentWeek, WeekRange } from './types'
+import { getCurrentWeek, getCurrentWeekDates } from '../src/current-week'
+import { CurrentWeek, WeekRange } from '../src/types'
 
 describe('getCurrentWeek', () => {
   const weeks: WeekRange[] = [
@@ -12,7 +12,6 @@ describe('getCurrentWeek', () => {
     { start: 23, end: 29 },
     { start: 30, end: 30 }
   ]
-
 
   it('should get the current week', () => {
     const date = new Date('02-Nov-2020')
@@ -26,7 +25,6 @@ describe('getCurrentWeek', () => {
 
   it('should get the current week with weeks range', () => {
     const date = new Date('10-Nov-2020')
-
 
     const expected: CurrentWeek = {
       date,

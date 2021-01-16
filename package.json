@@ -4,7 +4,7 @@
   "description": "Date helper with zero dependencies",
   "scripts": {
     "build": "aria-build -d",
-    "test": "aria-mocha --check-coverage",
+    "test": "aria-mocha --file ./tests --check-coverage",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "repository": {

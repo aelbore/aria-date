@@ -1,6 +1,6 @@
 import { expect } from 'aria-mocha'
-import { getMonths } from './months-range'
-import { formatter } from './formatter'
+import { getMonths } from '../src/months-range'
+import { formatter } from '../src/formatter'
 
 describe('getMonths', () => {
 

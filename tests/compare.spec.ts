@@ -1,5 +1,5 @@
 import { expect } from 'aria-mocha'
-import { compare } from './compare'
+import { compare } from '../src/compare'
 
 describe('compare', () => {
 
