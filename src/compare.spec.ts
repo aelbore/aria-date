@@ -5,7 +5,7 @@ describe('compare', () => {
 
   it('should compare isSame', () => {
     const date = new Date('05-Jan-21')
-
+    
     expect(compare(date).isSame('05-Jan-21')).toBeTrue() 
     expect(compare(date).isSame('04-Jan-21')).toBeFalse() 
     expect(compare(date).isSame('06-Jan-21')).toBeFalse() 

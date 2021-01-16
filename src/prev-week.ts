@@ -15,7 +15,7 @@ export interface PreviousWeekOptions {
   datesInPrevMonth?: boolean
 }
 
-export function getPreviousWeeks(date: Date, options: PreviousWeeksOptions) {
+export function getPreviousWeeks(date: Date | string | number, options: PreviousWeeksOptions) {
   const { range, datesInPrevMonth } = options
 
   const weeks: PreviousWeek[] = []

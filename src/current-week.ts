@@ -2,17 +2,19 @@ import { formatter } from './formatter'
 import { CurrentWeek, WeekRange } from './types'
 import { getWeeksInMonth } from './weeks-in-month'
 
-export function getCurrentWeek(date: Date, weeks?: WeekRange[]) {
-  weeks = weeks || getWeeksInMonth(date)
+export function getCurrentWeek(date: Date | string | number, weeks?: WeekRange[]) {
+  const copy = new Date(date)
 
-  const currentDay = date.getDate()
+  weeks = weeks || getWeeksInMonth(copy)
+
+  const currentDay = copy.getDate()
 
   const currentWeek = weeks.find(week => {
     return (week.start <= currentDay && week.end >= currentDay )
   })
 
   const result: CurrentWeek = {
-    date,
+    date: copy,
     week: weeks.indexOf(currentWeek) + 1,
     range: currentWeek   
   }

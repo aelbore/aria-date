@@ -1,8 +1,8 @@
 import { DateFormat } from './types'
 import { getDay } from './days'
 
-export function formatter(date?: Date) {
-  const value = date || new Date()
+export function formatter(date?: Date | string | number) {
+  const value = date ? new Date(date): new Date()
 
   const months = [ 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec' ]
   const day = value.getDate(), month = value.getMonth(), year = value.getFullYear(), weekday = value.getDay()

@@ -9,8 +9,8 @@ export function getDay(day: number, type?: WeekDay) {
   return type ? days[type][day]: days['short'][day]
 }
 
-export function getLastDate(date?: Date) {
-  const copy = date || new Date()
+export function getLastDate(date?: Date | string | number) {
+  const copy = date ? new Date(date): new Date()
   return new Date(
     copy.getFullYear(),
     copy.getMonth() + 1,

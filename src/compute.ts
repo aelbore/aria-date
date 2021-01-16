@@ -11,22 +11,22 @@ export interface ComputeResult {
   years(): Date
 }
 
-export function compute(date: Date) {
+export function compute(date: Date | string | number) {
   type Type = 'sub' | 'add'
   type Convert = (unit: UnitOfTime) => Date
   
-  const copy = new Date(date.getTime())
+  const copy = new Date(date)
 
   const addSubDate = (amount: number, unit: UnitOfTime, type: Type) => {
     switch (unit) {
       case 'days':
-        const day = date.getDate()
+        const day = new Date(date).getDate()
         return copy.setDate(type.includes('add') ? (day + amount): (day - amount))
       case 'months':
-        const month = date.getMonth()
+        const month = new Date(date).getMonth()
         return copy.setMonth(type.includes('add') ? (month + amount): (month - amount))
       case 'years':
-        const year = date.getFullYear()
+        const year = new Date(date).getFullYear()
         return copy.setFullYear(type.includes('add') ? (year + amount): year - amount)
     }
   }

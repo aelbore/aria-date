@@ -1,7 +1,7 @@
 import { WeekRange } from './types'
 
-export function getWeeksInMonth(date: Date) {
-  const month  = date.getMonth(), year = date.getFullYear()
+export function getWeeksInMonth(date: Date | string | number) {
+  const month  = new Date(date).getMonth(), year = new Date(date).getFullYear()
 
   const weeks: WeekRange[] = []
   const firstDate = new Date(year, month, 1)

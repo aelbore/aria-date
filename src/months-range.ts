@@ -1,5 +1,5 @@
-export function getMonths(range: number, date?: Date) {
-  const currentDate = date || new Date()
+export function getMonths(range: number, date?: Date | string | number) {
+  const currentDate = date ? new Date(date): new Date()
 
   const month = currentDate.getMonth()
   const year = currentDate.getFullYear()
