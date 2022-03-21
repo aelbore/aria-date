@@ -1,4 +1,4 @@
-import { expect } from 'aria-mocha'
+import { expect } from '@qoi/test'
 import { getCurrentWeek } from '../src/current-week'
 import { formatter } from '../src/formatter'
 

@@ -1,4 +1,4 @@
-import { expect } from 'aria-mocha'
+import { expect } from '@qoi/test'
 import { compare } from '../src/compare'
 
 describe('compare', () => {

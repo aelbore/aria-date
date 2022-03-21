@@ -1,4 +1,4 @@
-import { expect } from 'aria-mocha'
+import { expect } from '@qoi/test'
 
 import { getCurrentWeek, getCurrentWeekDates } from '../src/current-week'
 import { CurrentWeek, WeekRange } from '../src/types'

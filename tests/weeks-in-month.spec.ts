@@ -1,4 +1,4 @@
-import { expect } from 'aria-mocha'
+import { expect } from '@qoi/test'
 
 import { WeekRange } from '../src/types'
 import { getWeeksInMonth } from '../src/weeks-in-month'

@@ -1,4 +1,4 @@
-import { expect } from 'aria-mocha'
+import { expect } from '@qoi/test'
 import { getMonths } from '../src/months-range'
 import { formatter } from '../src/formatter'
 

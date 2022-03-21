@@ -20,9 +20,14 @@ export type DateFormat = 'DD-MMM-YY'
   | 'DD MMM, dddd'
   | 'DD MMM'
   | 'DD MMM YY'
+  | 'yyyy-MM-dd HH:mm:ss'
 
 export interface Formatter {
   format: (format: DateFormat) => string
+}
+
+export function padStart(value: number) {
+  return value.toString().padStart(2, '0')
 }
 
 export function formatter(date?: Date | string | number) {
@@ -30,11 +35,13 @@ export function formatter(date?: Date | string | number) {
 
   const months = [ 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec' ]
   const day = value.getDate(), month = value.getMonth(), year = value.getFullYear(), weekday = value.getDay()
+  const hour = value.getHours(), minute = value.getMinutes(), secs = value.getSeconds()
 
   const getDate = day.toString().padStart(2, '0') 
   const getMonth = months[month]
   const getYear = year.toString()
-
+  const time = `${padStart(hour)}:${padStart(minute)}:${padStart(secs)}`
+ 
   const formats: { [key: string]: string } = {
     'DD-MMM-YY': `${getDate}-${getMonth}-${getYear.substr(2)}`,
     'DD-MMM-YYYY': `${getDate}-${getMonth}-${getYear.substr(0)}`,
@@ -55,7 +62,8 @@ export function formatter(date?: Date | string | number) {
     'DD MMM, ddd': `${getDate} ${getMonth}, ${getDay(weekday)}`,
     'DD MMM, dddd': `${getDate} ${getMonth}, ${getDay(weekday, 'long')}`,
     'DD MMM': `${getDate} ${getMonth}`,
-    'DD MMM YY': `${getDate} ${getMonth} ${getYear.substr(2)}`
+    'DD MMM YY': `${getDate} ${getMonth} ${getYear.substr(2)}`,
+    'yyyy-MM-dd HH:mm:ss': `${getYear}-${(month + 1).toString().padStart(2, '0')}-${getDate} ${time}`
   }
 
   const format = (format: DateFormat) => formats[format]

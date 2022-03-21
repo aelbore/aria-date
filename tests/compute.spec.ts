@@ -1,4 +1,4 @@
-import { expect } from 'aria-mocha'
+import { expect } from '@qoi/test'
 
 import { compute } from '../src/compute'
 import { formatter } from '../src/formatter'

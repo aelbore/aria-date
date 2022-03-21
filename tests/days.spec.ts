@@ -1,4 +1,4 @@
-import { expect } from 'aria-mocha'
+import { expect } from '@qoi/test'
 
 import { getDay, getLastDate } from '../src/days'
 import { formatter } from '../src/formatter'

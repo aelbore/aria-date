@@ -1,4 +1,4 @@
-import { expect } from 'aria-mocha'
+import { expect } from '@qoi/test'
 import { formatter } from '../src/formatter'
 
 describe('formatter', () => {
@@ -20,6 +20,13 @@ describe('formatter', () => {
     expect(format.format('dddd, MMM YY')).equal('Sunday, Nov 20')
     expect(format.format('DD MMM, ddd')).equal('01 Nov, Sun')
     expect(format.format('DD MMM, dddd')).equal('01 Nov, Sunday')
+  })
+
+  it('should format date with time', () => {
+    const date = new Date('01-Jan-2020 10:01:11')
+    const format = formatter(date)
+
+    expect(format.format('yyyy-MM-dd HH:mm:ss')).equal(`2020-01-01 10:01:11`)
   })
 
   it('should format current date', () => {

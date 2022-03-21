@@ -1,4 +1,4 @@
-import { expect } from 'aria-mocha'
+import { expect } from '@qoi/test'
 import { datediff } from '../src/date-diff'
 
 describe('date-diff', () => {
